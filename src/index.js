@@ -142,7 +142,7 @@ const handleFiles = (fileInfos) => {
       unpickedFileCount += 1;
       log.d('Zp-pick: removing file ' + chalk.underline(fileInfo.sourceFilePath));
       fse.removeSync(fileInfo.sourceFilePath);
-    } else if (fileInfo.sourceFileName === fileInfo.targetFileName) {
+    } else if (fileInfo.sourceFileName !== fileInfo.targetFileName) {
       renamedFileCount += 1;
       log.d('Zp-pick: renaming file ' + chalk.underline(fileInfo.sourceFileName) + ' to ' + chalk.underline(fileInfo.targetFileName));
       fse.renameSync(fileInfo.sourceFilePath, fileInfo.targetFilePath);
