@@ -145,7 +145,7 @@ const handleFiles = (fileInfos) => {
     } else if (fileInfo.sourceFileName === fileInfo.targetFileName) {
       renamedFileCount += 1;
       log.d('Zp-pick: renaming file ' + chalk.underline(fileInfo.sourceFileName) + ' to ' + chalk.underline(fileInfo.targetFileName));
-      fse.renameSync(fileInfo.sourceFilePath, fileIndo.targetFilePath);
+      fse.renameSync(fileInfo.sourceFilePath, fileInfo.targetFilePath);
     }
   });
   log.i(`Zp-pick: done. ${unpickedFileCount} files removed. ${renamedFileCount} files renamed.`);
