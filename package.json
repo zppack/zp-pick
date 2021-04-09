@@ -1,0 +1,55 @@
+{
+  "name": "@zppack/zp-pick",
+  "version": "0.1.0",
+  "description": "A middleware for zp to support pick files according to variable values",
+  "keywords": [
+    "zp",
+    "zppack",
+    "middleware",
+    "zp-pick"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "babel src -d dist",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "release": "standard-version && npm publish --access public",
+    "release:first": "standard-version --first-release && npm publish --access public",
+    "postrelease": "git push && git push origin --tags",
+    "postrelease:first": "git push -u origin master && git push origin --tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zppack/zp-pick.git"
+  },
+  "author": "John Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zppack/zp-pick/issues"
+  },
+  "homepage": "https://github.com/zppack/zp-pick",
+  "dependencies": {
+    "@ltd/j-toml": "^1.6.0",
+    "@zppack/glob": "^1.0.1",
+    "@zppack/log": "^1.0.2",
+    "chalk": "^4.1.0",
+    "commander": "^7.2.0",
+    "fs-extra": "^9.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.1.1"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  }
+}
