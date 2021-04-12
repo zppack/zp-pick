@@ -160,6 +160,7 @@ const handleFiles = (fileInfos) => {
  * @param {*} next
  */
 const middleware = async (ctx, next) => {
+  const startTime = Date.now();
   log.i('Zp-pick: start `zp-pick` middleware');
   log.d('Zp-pick: recieving context: \n', JSON.stringify(ctx));
   const { tplPath, configDir, options } = ctx;
@@ -187,6 +188,9 @@ const middleware = async (ctx, next) => {
   log.d('Zp-pick: pick result files: \n', chalk.gray(JSON.stringify(resultFileInfos)));
 
   handleFiles(resultFileInfos);
+
+  const costTime = (Date.now() - startTime) / 1000;
+  log.i('Zp-pick: `zp-pick` middleware process completed. (' + costTime +'s)');
 
   await next();
 };
