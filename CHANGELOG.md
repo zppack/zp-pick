@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/zppack/zp-pick/compare/v0.1.3...v0.1.4) (2021-04-14)
+
+
+### Features
+
+* support number and boolean types ([2552c60](https://github.com/zppack/zp-pick/commit/2552c6060c0f3879f92522b22be618155143adac))
+
 ### [0.1.3](https://github.com/zppack/zp-pick/compare/v0.1.2...v0.1.3) (2021-04-12)
 
 ### [0.1.2](https://github.com/zppack/zp-pick/compare/v0.1.1...v0.1.2) (2021-04-09)

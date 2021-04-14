@@ -1,6 +1,6 @@
 {
   "name": "@zppack/zp-pick",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A middleware for zp to support pick files according to variable values",
   "keywords": [
     "zp",
