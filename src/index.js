@@ -75,7 +75,7 @@ const pickFiles = (fileInfos, options, pickOpts) => {
   return fileInfos.map((fileInfo) => {
     const picked = fileInfo.pickRules.every(({ pickKey, pickValue }) => {
       if (options[pickKey]) {
-        const targetVal = options[pickKey];
+        const targetVal = String(options[pickKey]);
         const dec = pickOpts[pickKey] ?? '=';
         if (dec === '=') {
           // 没有配置匹配修饰规则的，进行完全匹配
