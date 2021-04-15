@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/zppack/zp-pick/compare/v0.1.4...v0.1.5) (2021-04-15)
+
+
+### Bug Fixes
+
+* fix the bug that not doing "pick" when getting a boolean value `false` ([5f8f0d0](https://github.com/zppack/zp-pick/commit/5f8f0d09f93dd9ffc55be18fe7afdc93c436b93d))
+
 ### [0.1.4](https://github.com/zppack/zp-pick/compare/v0.1.3...v0.1.4) (2021-04-14)
 
 
