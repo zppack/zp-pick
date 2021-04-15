@@ -74,7 +74,7 @@ const getFileInfos = (files) => {
 const pickFiles = (fileInfos, options, pickOpts) => {
   return fileInfos.map((fileInfo) => {
     const picked = fileInfo.pickRules.every(({ pickKey, pickValue }) => {
-      if (options[pickKey]) {
+      if (Reflect.has(options, pickKey)) {
         const targetVal = String(options[pickKey]);
         const dec = pickOpts[pickKey] ?? '=';
         if (dec === '=') {
